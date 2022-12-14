@@ -74,7 +74,7 @@ form.onsubmit = (e) =>{
 }
 
 
-
+// functions
 const checkErrorsInUserName = () =>{
     if(username.value.length < 5 || username.value.length > 15){
         usernameError.textContent = "Username should be between 5 and 15 char."
