@@ -335,6 +335,9 @@ ul{
             width: 315px;
             height: 60px;
         }
+        .signUp form .password .error{
+            font-size: 8px;
+        }
     }
 /* End sign up  */
 /* Start succeed */
