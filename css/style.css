@@ -1,0 +1,366 @@
+:root{
+    --Onboarding-background-grey : #2D2D2D;
+    --light-purple-12 : #1F1249;
+    --gradient-1 : #2663DF;
+    --gradient-2 : #758FF0;
+
+    --background: #FFFFFF;
+    --light-blue-4 : #DBE3FF ;
+    --Dark-Grey: #3B3B3B;
+
+    --main-border-radius : 10px;
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+    /* Small */
+    @media (min-width: 768px) {
+        .container {
+            width: 750px;
+        }
+    }
+      /* Medium */
+    @media (min-width: 992px) {
+        .container {
+            width: 970px;
+        }
+    }
+      /* Large */
+    @media (min-width: 1200px) {
+        .container {
+            width: 1170px ;
+        }
+    }   
+/* change scroll bar */
+/* width */
+/* ::-webkit-scrollbar {
+    width: 11px;
+  } */
+  
+  /* Track */
+  /* ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--backGround);
+    border-radius: 10px;
+  } */
+  
+  /* Handle */
+  /* ::-webkit-scrollbar-thumb {
+    background: var(--secondColor);
+    border-radius: 8px;
+  } */
+  /* ::-webkit-scrollbar-thumb:hover{
+    background: #1976d2;
+  } */
+
+/* Start welcome page  */
+.main{
+    position: relative;
+    background-color: #1f124941;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.main::before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 60%;
+    background-image: url('../img/backGround.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+.image{
+    opacity: 1;
+    width: 450px;
+    height: 315px;
+    border-radius: var(--main-border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content{
+    background: rgba(245, 247, 255, 0.85);
+    border-radius: var(--main-border-radius);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    gap: 60px;
+    width: 1080px;
+    z-index: 500;
+}
+
+.content .welcomeMsg{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+}
+.content .title{
+    font-family: 'Mulish', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 56px;
+    line-height: 120%;
+    margin: 0;
+    color: var(--Onboarding-background-grey);
+}
+
+.content .subTitle{
+    font-family: 'Mulish', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 160%;
+    margin: 0;
+    color: var(--light-purple-12);
+}
+
+.content  .ctas{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+}
+
+.content .ctas button,
+.content .ctas input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    gap: 12px;
+    width: 450px;
+    height: 60px;
+    background: linear-gradient(113.87deg, var(--gradient-1) 14.81%, var(--gradient-2) 88.76%);
+    box-shadow: 0px 6px 18px #9CADF2;
+    border-radius: var(--main-border-radius);
+    font-family: 'Mulish', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+    transition: all 400ms ease-out;
+}
+.content  .ctas button:hover{
+    background: linear-gradient(268deg, var(--gradient-1) 14.81%, var(--gradient-2) 88.76%);
+}
+    /* Small */
+    @media screen and (max-width: 768px) {
+        .main{
+            width: 100%;
+            padding: 0;
+            gap: 0;
+            justify-content: center;
+        }
+        .content{
+            flex-direction: column;
+            padding: 40px 0px;
+            gap: 40px;
+            width: 375px;
+            height: 100%;
+            border-radius: 0;
+            width: 100%;
+        }
+        .image{
+            width: 315px;
+            height: 315px;
+        }
+        .content .welcomeMsg{
+            width: 315px;
+            align-items: center;
+            justify-content: center;
+        }
+        .content  .title{
+            font-size: 42px;
+        }
+        .content  .subTitle{
+            font-size: 16px;
+            text-align: center;
+        }
+        .content  .ctas button{
+            width: 315px;
+            height: 60px;
+        }
+    }
+/* End welcome page  */
+/* Start sign up  */
+.signUp .image{
+    width: 450px;
+    height: 536px;
+}
+.signUp .title,
+.succeed .title{
+    font-size: 42px;
+}
+.signUp .subTitle{
+    font-size: 24px;
+}
+.signUp form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    width: 100%;
+}
+.signUp form .typeForm{
+    position: relative;
+    border: 1px solid var(--light-blue-4);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 20px;
+    gap: 12px;
+    width: 450px;
+    height: 60px;
+    border-radius: var(--main-border-radius);   
+    background-color: var(--background); 
+}
+.signUp form .typeForm .error{
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 61px;
+    font-family: 'Mulish', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    color: #ff3333;
+    transition: all 400ms ease-out;
+}
+.signUp form .typeForm .icon{
+    padding: 0px;
+    gap: 8px;
+    width: 29px;
+    height: 20px;
+}
+.signUp form .typeForm input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+.signUp form .typeForm input::placeholder{
+    font-family: 'Mulish', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--Dark-Grey);
+    opacity: 1;
+    transition: all 400ms ease-out;
+}
+.signUp form .typeForm input:focus{
+    border: none;
+    outline: none;
+}
+.signUp form .typeForm input:focus::placeholder{
+    opacity: 0;
+}
+    /* Small */
+    @media screen and (max-width: 768px) {
+        .signUp{
+            height: 142vh !important;
+        }
+        .signUp .image{
+            width: 315px;
+            height: 315px;
+        }
+        .signUp .image img{
+            width: 100%;
+        }
+        .signUp .title{
+            font-size: 32px;
+        }
+        .signUp .subTitle{
+            font-size: 16px;
+        }
+        .signUp form{
+            padding: 0px;
+            gap: 10px;
+            width: 315px;
+        }
+        .signUp form .typeForm{
+            padding: 8px 20px;
+            gap: 12px;
+            width: 315px;
+            height: 60px;
+        }
+        .submit{
+            padding: 0px 50px;
+            gap: 12px;
+            width: 315px;
+            height: 60px;
+        }
+    }
+/* End sign up  */
+/* Start succeed */
+.succeed .image{
+    width: 450px;
+    height: 456px;
+}
+.succeed .subTitle{
+    text-decoration-line: underline;
+    font-size: 16px;
+}
+    /* Small */
+    @media screen and (max-width: 768px){
+        .main{
+            height: 100vh;
+        }
+        .succeed .image{
+            width: 322px;
+            height: 315px;
+        }
+        .succeed .title{
+            font-size: 31px;
+        }
+        .succeed .subTitle{
+            text-align: center;
+            text-decoration: none;
+        }
+    }
+/* End succeed */
